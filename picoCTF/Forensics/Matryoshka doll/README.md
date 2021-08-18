@@ -1,5 +1,5 @@
 # Matryoshka doll
-![Matryoshka_doll](https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/Forensics/Matryoshka%20doll/Matryoshka_doll.png)
+![Matryoshka_doll](https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/Forensics/Matryoshka%20doll/image/Matryoshka_doll.png)
 
 ## Hint
 1. Wait, you can hide files inside files? But how do you find them?
@@ -12,7 +12,7 @@
 ## Walkthrough
 이미지를 다운받는다.
 
-<img src="https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/Forensics/Matryoshka%20doll/dolls.png" width="450px" height="300px" title="dolls" alt="dolls"></img><br/>
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/Forensics/Matryoshka%20doll/image/dolls.png" width="450px" height="300px" title="dolls" alt="dolls"></img><br/>
 
 
 Downloads 디렉터리로 이동후 binwalk 모듈을 사용해 이 문제를 풀어나간다.
