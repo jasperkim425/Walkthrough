@@ -15,7 +15,7 @@
 ## Walkthrough
 This program 버튼을 클릭해 warm 프로그램 파일을 다운받을 수 있다.
 
-<img src="https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/General%20Skills/Wave%20a%20flag/image/warm.png" width="500px" height="300px" title="warm" alt="warm"></img><br/>
+![warm](https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/General%20Skills/Wave%20a%20flag/image/warm.png)
 
 warm은 프로그램 파일이므로 실행 권한을 부여한다.
 
