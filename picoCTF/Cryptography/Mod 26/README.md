@@ -13,7 +13,7 @@
 
 cvpbPGS{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_Ncualgvd}
 
-<img src="https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/Cryptography/Mod%2026/rot13.png" width="500px" height="700px" title="rot13" alt="rot13"></img><br/>
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/Cryptography/Mod%2026/image/rot13.png" width="500px" height="700px" title="rot13" alt="rot13"></img><br/>
 
 ## Flag
 > picoCTF{next_time_I'll_try_2_rounds_of_rot13_Aphnytiq}
