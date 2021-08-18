@@ -24,7 +24,7 @@ Kali and most other security distributions of Linux include Metasploit by defaul
 
 If this is your first time using Metasploit, you'll have just a few things to do before you utilize its full functionality. Let's go ahead and get everything started!
 
-![Metasploit_Framework](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Metasploit/image/Metasploit_Framework.png)
+![Rapid7](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Metasploit/image/Rapid7.jpeg)
 
 ***
 
@@ -215,7 +215,7 @@ Go ahead and run the command `use NUMBER_NEXT_TO  exploit/multi/handler` wherein
 
 What is the name of the column on the far left side of the console that shows up next to 'Name'?
 
-> #
+> *#*
 
 Now type the command `use NUMBER_FROM_PREVIOUS_QUESTION`. This is the short way to use modules returned by search results. 
 
