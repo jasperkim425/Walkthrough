@@ -28,23 +28,23 @@ Lets deploy your AttackBox, a web-based machine used to attack other machines.
 
 3. Copy the IP of the machine that you deployed on this task.
 
-![attackboxip]()
+![attackboxip](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%200/image/attackboxip.png)
 
 4. Paste the IP into the AttackBox machine's Firefox.
     1. `Access Machines` 버튼을 클릭한다.
 
-    ![access]()
+    ![access](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%200/image/access.png)
     
     2. 칼리리눅스에서 진행할 것이므로 `OpenVPN` 버튼을 클릭한다.
     
-    ![vpn]()
+    <img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%200/image/vpn.png" width="300px" height="300px" title="vpn" alt="vpn"></img><br/>
     
     3. 리눅스 openvpn을 다운받는다.
     
-    ![download]()
+    <img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%200/image/download.png" width="300px" height="300px" title="download" alt="download"></img><br/>
     
     4. OpenVPN을 연결한다.
 
-    ![openvpn]()
+    ![openvpn](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%200/image/openvpn.png)
 
-    ![tun0]()
+    ![tun0](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%200/image/tun0.png)
