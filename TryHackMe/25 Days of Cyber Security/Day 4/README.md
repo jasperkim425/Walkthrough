@@ -4,7 +4,7 @@
 
 Deploy your AttackBox (the blue "Start AttackBox" button) and the tasks machine (green button on this task) if you haven't already. Once both have deployed, open FireFox on the AttackBox and copy/paste the machines IP (MACHINE_IP) into the browser search bar.
 
-![attackbox]()
+![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%204/image/attackbox.png)
 
 Given the URL "http://shibes.xyz/api.php", what would the entire wfuzz command look like to query the "breed" parameter using the wordlist "big.txt" (assume that "big.txt" is in your current directory)
 
@@ -16,9 +16,13 @@ Use GoBuster (against the target you deployed -- not the shibes.xyz domain) to f
 
 > site-log.php
 
-![gobuster]()
+```
+$ sudo gobuster dir -u http://10.10.18.178/ -w /usr/share/dirb/wordlists/big.txt
+```
 
-![api]()
+![gobuster](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%204/image/gobuster.png)
+
+![api](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%204/image/api.png)
 
 Fuzz the date parameter on the file you found in the API directory. What is the flag displayed in the correct post?
 
@@ -114,4 +118,4 @@ Requests/sec.: 0
 
 20201125가 특별해 보이니 해당 payload를 파라미터 값에 넣어 검색하면 플래그를 얻을 수 있다.
 
-![flag]()
+![flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%204/image/flag.png)
