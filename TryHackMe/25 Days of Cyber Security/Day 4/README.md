@@ -1,4 +1,8 @@
-# Day 4 | 
+# Day 4 | Santa's watching
+
+## Workstation
+- Virtual Box : VMware Fusion 12.1.0
+- OS : kali-linux-2020.04
 
 ## Walkthrough
 
