@@ -88,6 +88,8 @@ $ burpsuite
 
 버프스위트를 사용하기 위해 프록시 설정을 해준다.
 
+파이어폭스(Firefox) → 설정(Preferences) → 네트워크 설정(Network Settings) → 프록시 설정(Manual proxy configuration)
+
 ![proxy](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/proxy.png)
 
 프록시 설정 후 해당 페이지를 새로고침하면 버프스위트 proxy 부분에 인터셉트 된다.
