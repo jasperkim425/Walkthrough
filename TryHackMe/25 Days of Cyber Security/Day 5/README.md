@@ -13,7 +13,7 @@ Santa's TODO: Look at alternative database systems that are better than sqlite. 
 
 ***
 
-![attackbox]()
+![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/attackbox.png)
 
 Without using directory brute forcing, what's Santa's secret login panel?
 
@@ -21,7 +21,7 @@ Without using directory brute forcing, what's Santa's secret login panel?
 
 힌트를 확인하면 알 수 있다.
 
-<img src="" width="800px" height="200px" title="hint" alt="hint"></img><br/>
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/hint.png" width="800px" height="200px" title="hint" alt="hint"></img><br/>
 
 Visit Santa's secret login panel and bypass the login using SQLi
 
@@ -66,19 +66,19 @@ Nmap done: 1 IP address (1 host up) scanned in 50.51 seconds
 
 8000번 포트에 http 서버가 열려있다.
 
-![ip]()
+![ip](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/ip.png)
 
 비밀 로그인 패널이 있는 주소로 이동한다.
 
-![santapanel]()
+![santapanel](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/santapanel.png)
 
 username 부분에 `' or true --`를 입력 후 login을 시도하면 다음과 같이 SQL Injection에 성공했다.
 
-![username]()
+![username](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/username.png)
 
 paul로 검색을 해보면 아무것도 나오지 않는다.
 
-![paul]()
+![paul](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/paul.png)
 
 해당 사이트를 sqlmap을 사용하기 위해 burpsuite를 사용한다.
 
@@ -88,15 +88,15 @@ $ burpsuite
 
 버프스위트를 사용하기 위해 프록시 설정을 해준다.
 
-![proxy]()
+![proxy](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/proxy.png)
 
 프록시 설정 후 해당 페이지를 새로고침하면 버프스위트 proxy 부분에 인터셉트 된다.
 
-![intercept]()
+![intercept](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/intercept.png)
 
 이 부분을 저장한다. 마우스 우클릭 하면 Save Item 버튼을 클릭하면 된다.
 
-![save]()
+![save](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/save.png)
 
 해당 페이지를 저장했다면 터미널에서 sqlmap을 사용한다.
 
