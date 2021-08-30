@@ -5,13 +5,13 @@
 - OS : kali-linux-2021.2
 
 ## Walkthrough
-![attackbox]()
+![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%208/image/attackbox.png)
 
 When was Snort created?
 
 > 1998
 
-![snort]()
+![snort](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%208/image/snort.png)
 
 Using Nmap on 10.10.229.53 , what are the port numbers of the three services running?  (Please provide your answer in ascending order/lowest -> highest, separated by a comma)
 
@@ -23,7 +23,7 @@ nmap 명령어만 사용하여 ip 주소를 검색했다.
 $ sudo nmap 10.10.229.53
 ```
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%208/image/nmap.png)
 
 하지만 아무것도 나오지 않아 `-Pn` 추가해 검색했더니 3개의 포트가 나왔다.
 
@@ -31,7 +31,7 @@ $ sudo nmap 10.10.229.53
 $ sudo nmap -Pn 10.10.229.53
 ```
 
-![nmap-Pn]()
+![nmap-Pn](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%208/image/nmap-Pn.png)
 
 Run a scan and provide the `-Pn` flag to ignore ICMP being used to determine if the host is up
 
@@ -92,6 +92,6 @@ Use Nmap's Network Scripting Engine (NSE) to retrieve the "HTTP-TITLE" of the we
 $ sudo nmap --script http-title 10.10.229.53
 ```
 
-![nmapscript]()
+![nmapscript](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%208/image/nmapscript.png)
 
 Now use different scripts against the remaining services to discover any further information about them
