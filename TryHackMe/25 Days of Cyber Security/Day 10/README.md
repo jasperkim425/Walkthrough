@@ -5,7 +5,7 @@
 - OS : kali-linux-2021.2
 
 ## Walkthrough
-![attackbox]()
+![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2010/image/attackbox.png)
 
 Question #1 Using enum4linux, how many users are there on the Samba server (10.10.114.84)?
 
@@ -131,11 +131,11 @@ Question #3 Use smbclient to try to login to the shares on the Samba server (10.
 
 공유된 디렉터리를 smbclient 명령어를 사용해 접속해 본다.
 
-![tbfc-hr]()
+![tbfc-hr](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2010/image/tbfc-hr.png)
 
-![tbfc-it]()
+![tbfc-it](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2010/image/tbfc-it.png)
 
-![tbfc-santa]()
+![tbfc-santa](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2010/image/tbfc-santa.png)
 
 tbfc-santa 디렉터리가 패스워드가 없이 접속됐다.
 
@@ -147,10 +147,10 @@ Question #4 Log in to this share, what directory did ElfMcSkidy leave for Santa?
 
 텍스트 파일을 다운받은 후 jingle-tunes 디렉터리를 확인해 보니 아무것도 없었다.
 
-![ls]()
+![ls](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2010/image/ls.png)
 
 발견한게 없으니 다운받은 텍스트 파일의 내용을 확인해 본다.
 
-![cat]
+![cat](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2010/image/cat.png)
 
 내용을 확인해 보니 jingle 파일에 Share 하기로 했다고 되어있다.
