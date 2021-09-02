@@ -17,7 +17,7 @@ Bonus: There are at least two ways of escalating your privileges after you gain 
 
 ***
 
-![attackbox]()
+![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/attackbox.png)
 
 What is the version number of the web server?
 
@@ -29,11 +29,11 @@ What is the version number of the web server?
 $ sudo nmap -Pn 10.10.97.244
 ```
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/nmap.png)
 
 8080번 포트에 http-proxy 서버가 열려있다. 해당 포트로 사이트로 접속한다.
 
-![ip]()
+![ip](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/ip.png)
 
 Apache Tomcat 9.0.17 버전으로 만들어진 사이트가 있다.
 
@@ -49,23 +49,23 @@ Set your Metasploit settings appropriately and gain a foothold onto the deployed
 
 사이트의 취약점을 알아내기 위해서 글 위에서 제공한 `elfwhacker.bat`의 CGI 값을 찾아본다.
 
-![cgi]()
+![cgi](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/cgi.png)
 
 /cgi-bin/elfwhacker.bat에 취약점이 맞는지 확인하기 위해 파라미터 값에 `?&systeminfo` 입력해 명령어가 되는지 확인한다.
 
-![sys]
+![sys](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/sys.png)
 
 위 CGI 값이 취약한 것을 확인했다면 Metasploit 하기 위해 `msfconsole`을 실행 후 apache tomcat 9.0의 취약점을 이용하는 도구를 검색한다.
 
-![search]()
+![search](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/search.png)
 
 첫번째가 위에서 찾은 취약점이므로 `use 0` 입력 후 설정해야 할 값들을 확인한다.
 
-![options]()
+![options](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/options.png)
 
 `rhost` 값에는 공격할 IP 주소를 `lhost` 값에는 내 OpenVpn IP 값을 `targeturl`에 취약한 파라미터 값을 설정한 후 exploit을 한다.
 
-![set]()
+![set](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/set.png)
 
 meterpreter 환경을 얻었다는 것은 취약점 공격이 성공했다는 것이다.
 
@@ -75,6 +75,6 @@ What are the contents of flag1.txt
 
 디렉터리의 파일을 조사하면 flag를 얻을 수 있다.
 
-![flag]()
+![flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/flag.png)
 
 Looking for a challenge? Try to find out some of the vulnerabilities present to escalate your privileges!
