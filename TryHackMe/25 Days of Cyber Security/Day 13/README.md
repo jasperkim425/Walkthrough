@@ -5,7 +5,7 @@
 - OS : kali-linux-2021.2
 
 ## Walkthrough
-![attackbox]()
+![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2013/image/attackbox.png)
 
 Hi Santa, hop in your sleigh and deploy this machine!
 
@@ -21,7 +21,7 @@ What old, deprecated protocol and service is running?
 
 > telnet
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2013/image/nmap.png)
 
 #### Initial Access
 
@@ -33,7 +33,7 @@ What credential was left for you?
 
 > clauschristmas
 
-![telnet]()
+![telnet](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2013/image/telnet.png)
 
 #### Enumeration
 
@@ -53,7 +53,7 @@ What distribution of Linux and version number is this server running?
 
 > ubuntu 12.04
 
-![cat]()
+![cat](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2013/image/cat.png)
 
 This is a very old version of Linux! This may be vulnerable to some kernel exploits, that we could use to escalate our privileges.
 
@@ -209,7 +209,7 @@ cookies_and_milk.txt 파일이 실행파일 같이 보여 해당 파일을 C 파
 
 https://github.com/FireFart/dirtycow/blob/master/dirty.c
 
-![cp]()
+![cp](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2013/image/cp.png)
 
 You can compile the C source code on the target with gcc. You might need to supply specific parameters or arguments to include different libraries, but thankfully, the DirtyCow source code will explain what syntax to use.
 
@@ -219,7 +219,7 @@ What is the verbatim syntax you can use to compile, taken from the real C source
 
 위 사이트 코드를 `nano` 편집기로 dirty.c 파일에 복사한 후 `gcc` 명령어로 컴파일한다.
 
-![nano]()
+![nano](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2013/image/nano.png)
 
 #### Privilege Escalation
 
@@ -247,8 +247,8 @@ What is the MD5 hash output?
 
 `su firefart`로 firefart 계정으로 접속한다.
 
-![dirty]()
+![dirty](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2013/image/dirty.png)
 
 /root/ 디렉터리로 이동 후 리스트를 확인하면 coal 파일은 없다. coal 남겼다고 하니 `touch` 명령어로 파일을 생성 후 `tree | md5sum`를 실행하면 MD5 해쉬를 얻을 수 있다.
 
-![md5]()
+![md5](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2013/image/md5.png)
