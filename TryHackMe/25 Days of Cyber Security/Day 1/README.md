@@ -12,7 +12,7 @@ Note: Remember that machines can take up to five minutes to boot up fully!
 
 ***
 
-Deploy your AttackBox (the blue "Start AttackBox" button) and the tasks machine (green button on this task) if you haven't already. Once both have deployed, open FireFox on the AttackBox and copy/paste the machines IP into the browser search bar.
+### Deploy your AttackBox (the blue "Start AttackBox" button) and the tasks machine (green button on this task) if you haven't already. Once both have deployed, open FireFox on the AttackBox and copy/paste the machines IP into the browser search bar.
 
 ![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%201/image/attackbox.png)
 
@@ -24,7 +24,7 @@ FireFox 브라우저를 열어 `attackbox`의 아이피 주소를 입력한다.
 
 ![register](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%201/image/register.png)
 
-What is the name of the cookie used for authentication?
+### What is the name of the cookie used for authentication?
 
 > auth
 
@@ -32,11 +32,11 @@ What is the name of the cookie used for authentication?
 
 ![auth](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%201/image/auth.png)
 
-In what format is the value of this cookie encoded?
+### In what format is the value of this cookie encoded?
 
 > Hexadecimal
 
-Having decoded the cookie, what format is the data stored in?
+### Having decoded the cookie, what format is the data stored in?
 
 > JSON
 
@@ -46,7 +46,11 @@ Having decoded the cookie, what format is the data stored in?
 
 ![cyberchef](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%201/image/cyberchef.png)
 
-What is the value of Santa's cookie?
+Figure out how to bypass the authentication.
+
+
+
+### What is the value of Santa's cookie?
 
 > 7b22636f6d70616e79223a22546865204265737420466573746976616c20436f6d70616e79222c2022757365726e616d65223a2273616e7461227d
 
@@ -56,7 +60,11 @@ Delimiter 부분을 None으로 설정해 준다.
 
 ![santa](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%201/image/santa.png)
 
-What is the flag you're given when the line is fully active?
+Now that you are the santa user, you can re-activate the assembly line!
+
+
+
+### What is the flag you're given when the line is fully active?
 
 > THM{MjY0Yzg5NTJmY2Q1NzM1NjBmZWFhYmQy}
 
