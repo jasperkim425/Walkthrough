@@ -7,7 +7,7 @@
 ## Walkthrough
 ![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%209/image/attackbox.png)
 
-Question #1: Name the directory on the FTP server that has data accessible by the "anonymous" user
+### Question #1: Name the directory on the FTP server that has data accessible by the "anonymous" user
 
 > public
 
@@ -19,7 +19,7 @@ $ sudo ftp 10.10.65.80
 
 ![anonymous](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%209/image/anonymous.png)
 
-Question #2: What script gets executed within this directory?
+### Question #2: What script gets executed within this directory?
 
 > backup.sh
 
@@ -27,7 +27,7 @@ Question #2: What script gets executed within this directory?
 
 ![ls](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%209/image/ls.png)
 
-Question #3: What movie did Santa have on his Christmas shopping list?
+### Question #3: What movie did Santa have on his Christmas shopping list?
 
 > The Polar Express
 
@@ -37,7 +37,7 @@ Question #3: What movie did Santa have on his Christmas shopping list?
 
 ![catlist](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%209/image/catlist.png)
 
-Question #4: Re-upload this script to contain malicious data (just like we did in section 9.6. Output the contents of /root/flag.txt!
+### Question #4: Re-upload this script to contain malicious data (just like we did in section 9.6. Output the contents of /root/flag.txt!
 
 Note that the script that we have uploaded may take a minute to return a connection. If it doesn't after a couple of minutes, double-check that you have set up a Netcat listener on the device that you are working from, and have provided the TryHackMe IP of the device that you are connecting from.
 
