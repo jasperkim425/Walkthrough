@@ -7,8 +7,7 @@
 ## Walkthrough
 <img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%207/image/aoc-pcaps.png" width="450px" height="300px" title="aoc-pcaps" alt="aoc-pcaps"></img><br/>
 
-
-Open "pcap1.pcap" in Wireshark. What is the IP address that initiates an ICMP/ping?
+### Open "pcap1.pcap" in Wireshark. What is the IP address that initiates an ICMP/ping?
 
 > 10.11.3.2
 
@@ -20,13 +19,13 @@ wireshark를 실행 후 아래로 스크롤 하다 보면 ICMP 프로토콜로 �
 
 ![icmp](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%207/image/icmp.png)
 
-If we only wanted to see HTTP GET requests in our "pcap1.pcap" file, what filter would we use?
+### If we only wanted to see HTTP GET requests in our "pcap1.pcap" file, what filter would we use?
 
 > http.request.method == GET
 
 ![get](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%207/image/get.png)
 
-Now apply this filter to "pcap1.pcap" in Wireshark, what is the name of the article that the IP address "10.10.67.199" visited?
+### Now apply this filter to "pcap1.pcap" in Wireshark, what is the name of the article that the IP address "10.10.67.199" visited?
 
 > reindeer-of-the-week
 
@@ -40,7 +39,7 @@ File → Export Objects → HTTP 를 클릭한다.
 
 Let's begin analysing "pcap2.pcap". Look at the captured FTP traffic; what password was leaked during the login process?
 
-There's a lot of irrelevant data here - Using a filter here would be useful!
+### There's a lot of irrelevant data here - Using a filter here would be useful!
 
 > plaintext_password_fiasco
 
@@ -56,7 +55,7 @@ tcp.port == 21
 
 ![ftp](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%207/image/ftp.png)
 
-Continuing with our analysis of "pcap2.pcap", what is the name of the protocol that is encrypted?
+### Continuing with our analysis of "pcap2.pcap", what is the name of the protocol that is encrypted?
 
 > SSH
 
@@ -66,7 +65,7 @@ Continuing with our analysis of "pcap2.pcap", what is the name of the protocol t
 
 Analyse "pcap3.pcap" and recover Christmas!
 
-What is on Elf McSkidy's wishlist that will be used to replace Elf McEager?
+### What is on Elf McSkidy's wishlist that will be used to replace Elf McEager?
 
 > Rubber ducky
 
