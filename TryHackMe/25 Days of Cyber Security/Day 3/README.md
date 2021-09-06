@@ -5,7 +5,7 @@
 - OS : kali-linux-2020.04
 
 ## Walkthrough
-Deploy your AttackBox (the blue "Start AttackBox" button) and the tasks machine (green button on this task) if you haven't already. Once both have deployed, open Firefox on the AttackBox and copy/paste the machines IP (MACHINE_IP) into the browser search bar.
+### Deploy your AttackBox (the blue "Start AttackBox" button) and the tasks machine (green button on this task) if you haven't already. Once both have deployed, open Firefox on the AttackBox and copy/paste the machines IP (MACHINE_IP) into the browser search bar.
 
 AttackBox를 실행한다.
 
@@ -57,7 +57,7 @@ Attack Type을 설정했다면 Payloads 메뉴로 넘어가 ID 부분을 공격�
 
 ![attack](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%203/image/attack.png)
 
-What is the flag?
+### What is the flag?
 
 > THM{885ffab980e049847516f9d8fe99ad1a}
 
