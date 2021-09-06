@@ -5,18 +5,17 @@
 - OS : kali-linux-2020.04
 
 ## Walkthrough
-
-Deploy your AttackBox (the blue "Start AttackBox" button) and the tasks machine (green button on this task) if you haven't already. Once both have deployed, open FireFox on the AttackBox and copy/paste the machines IP (MACHINE_IP) into the browser search bar.
+### Deploy your AttackBox (the blue "Start AttackBox" button) and the tasks machine (green button on this task) if you haven't already. Once both have deployed, open FireFox on the AttackBox and copy/paste the machines IP (MACHINE_IP) into the browser search bar.
 
 ![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%204/image/attackbox.png)
 
 Given the URL "http://shibes.xyz/api.php", what would the entire wfuzz command look like to query the "breed" parameter using the wordlist "big.txt" (assume that "big.txt" is in your current directory)
 
-Note: For legal reasons, do not actually run this command as the site in question has not consented to being fuzzed!
+### Note: For legal reasons, do not actually run this command as the site in question has not consented to being fuzzed!
 
 > wfuzz -c -z file,big.txt http://shibes.xyz/api.php?breed=FUZZ
 
-Use GoBuster (against the target you deployed -- not the shibes.xyz domain) to find the API directory. What file is there?
+### Use GoBuster (against the target you deployed -- not the shibes.xyz domain) to find the API directory. What file is there?
 
 > site-log.php
 
@@ -28,7 +27,7 @@ $ sudo gobuster dir -u http://10.10.18.178/ -w /usr/share/dirb/wordlists/big.txt
 
 ![api](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%204/image/api.png)
 
-Fuzz the date parameter on the file you found in the API directory. What is the flag displayed in the correct post?
+### Fuzz the date parameter on the file you found in the API directory. What is the flag displayed in the correct post?
 
 > THM{D4t3_AP1}
 
