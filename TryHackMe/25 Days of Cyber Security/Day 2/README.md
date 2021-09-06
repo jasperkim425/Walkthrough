@@ -27,13 +27,13 @@ $ sudo openvpn (TryHackMe ID).ovpn
 
 ![ip](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%202/image/ip.png)
 
-What string of text needs adding to the URL to get access to the upload page?
+### What string of text needs adding to the URL to get access to the upload page?
 
 > ?id=ODIzODI5MTNiYmYw
 
 ![id](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%202/image/id.png)
 
-What type of file is accepted by the site?
+### What type of file is accepted by the site?
 
 > Image
 
@@ -43,7 +43,7 @@ What type of file is accepted by the site?
 
 Bypass the filter and upload a reverse shell.
 
-In which directory are the uploaded files stored?
+### In which directory are the uploaded files stored?
 
 > /uploads/
 
@@ -51,7 +51,7 @@ In which directory are the uploaded files stored?
 
 ![dirb](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%202/image/dirb.png)
 
-Activate your reverse shell and catch it in a netcat listener!
+### Activate your reverse shell and catch it in a netcat listener!
 
 1. php-reverse-shell.php 파일를 복사하고 파일 이름을 업로드 시 이미지 파일(.jpg.php)로 인식할 수 있도록 변경한다.
 ![php](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%202/image/php.png)
@@ -65,7 +65,7 @@ Activate your reverse shell and catch it in a netcat listener!
 4. reverse.jpg.php 파일을 업로드 한다. 파일이 보이지 않을 경우 파일 타입을 All Files로 변경하여 진행한다.
 ![upload](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%202/image/upload.png)
 
-What is the flag in /var/www/flag.txt?
+### What is the flag in /var/www/flag.txt?
 
 > THM{MGU3Y2UyMGUwNjExYTY4NTAxOWJhMzhh}
 
