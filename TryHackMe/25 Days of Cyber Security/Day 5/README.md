@@ -15,7 +15,7 @@ Santa's TODO: Look at alternative database systems that are better than sqlite. 
 
 ![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/attackbox.png)
 
-Without using directory brute forcing, what's Santa's secret login panel?
+### Without using directory brute forcing, what's Santa's secret login panel?
 
 > /santapanel
 
@@ -23,7 +23,7 @@ Without using directory brute forcing, what's Santa's secret login panel?
 
 <img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%205/image/hint.png" width="800px" height="200px" title="hint" alt="hint"></img><br/>
 
-Visit Santa's secret login panel and bypass the login using SQLi
+### Visit Santa's secret login panel and bypass the login using SQLi
 
 nmap 으로 포트를 조사한다.
 
@@ -197,18 +197,18 @@ Table: hidden_table
 
 나온 결과로 다음 문제를 풀어나가면 된다.
 
-How many entries are there in the gift database?
+### How many entries are there in the gift database?
 
 > 22
 
-What did Paul ask for?
+### What did Paul ask for?
 
 > github ownership
 
-What is the flag?
+### What is the flag?
 
 > thmfox{All_I_Want_for_Christmas_Is_You}
 
-What is admin's password?
+### What is admin's password?
 
 > EhCNSWzzFP6sc7gB
