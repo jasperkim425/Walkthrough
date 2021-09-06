@@ -7,7 +7,7 @@
 ## Walkthrough
 ![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2013/image/attackbox.png)
 
-Hi Santa, hop in your sleigh and deploy this machine!
+### Hi Santa, hop in your sleigh and deploy this machine!
 
 The Christmas GPS now says this house is at the address 10.10.214.198. Scan this machine with a port-scanning tool of your choice.
 
@@ -17,7 +17,7 @@ We will begin by scanning the machine. If you are working from the TryHackMe "At
 
 `nmap 10.10.214.198`
 
-What old, deprecated protocol and service is running?
+### What old, deprecated protocol and service is running?
 
 > telnet
 
@@ -29,7 +29,7 @@ Connect to this service to see if you can make use of it. You can connect to the
 
 `telnet 10.10.214.198 <PORT_FROM_NMAP_SCAN>`
 
-What credential was left for you?
+### What credential was left for you?
 
 > clauschristmas
 
@@ -49,7 +49,7 @@ Often to enumerate you want to look at pertinent system information, like the ve
 
 There is a great list of commands you can run for enumeration here: https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/
 
-What distribution of Linux and version number is this server running?
+### What distribution of Linux and version number is this server running?
 
 > ubuntu 12.04
 
@@ -61,7 +61,7 @@ Take a look at the cookies and milk that the server owners left for you. You can
 
 cat cookies_and_milk.txt
 
-Who got here first?
+### Who got here first?
 
 > Grinch
 
@@ -213,7 +213,7 @@ https://github.com/FireFart/dirtycow/blob/master/dirty.c
 
 You can compile the C source code on the target with gcc. You might need to supply specific parameters or arguments to include different libraries, but thankfully, the DirtyCow source code will explain what syntax to use.
 
-What is the verbatim syntax you can use to compile, taken from the real C source code comments?
+### What is the verbatim syntax you can use to compile, taken from the real C source code comments?
 
 > gcc -pthread dirty.c -o dirty -lcrypt
 
@@ -225,19 +225,21 @@ What is the verbatim syntax you can use to compile, taken from the real C source
 
 Run the commands to compile the exploit, and run it.
 
-What "new" username was created, with the default operations of the real C source code?
+### What "new" username was created, with the default operations of the real C source code?
+
+> firefart
 
 Switch your user into that new user account, and hop over to the /root directory to own this server!
 
 You can switch user accounts like so:
 
-su <user_to_change_to>
+### su <user_to_change_to>
 
 Uh oh, looks like that perpetrator left a message! Follow his instructions to prove you really did leave Coal for Christmas!
 
 After you leave behind the coal, you can run tree | md5sum
 
-What is the MD5 hash output?
+### What is the MD5 hash output?
 
 > 8b16f00dd3b51efadb02c1df7f8427cc
 
