@@ -1,18 +1,15 @@
-# Day 13 | Networking Coal for Christmas
+# Day 14 | OSINT Where's Rudolph? 
 
 ## Workstation
 - Virtual Box : VMware Fusion 12.1.2
 - OS : kali-linux-2021.2
 
 ## Walkthrough
-#### Task #1
+### Task #1
 
-While hunting and searching for any hints or clues
-
-Santa uncovers some details and shares the news
-
-Rudolph loved to use Reddit and browsed aplenty
-
+While hunting and searching for any hints or clues<br>
+Santa uncovers some details and shares the news<br>
+Rudolph loved to use Reddit and browsed aplenty<br>
 His username was 'IGuidetheClaus2020'
 
 Many OSINT investigations start with only a username. A user's posting history can possibly lead to further information. Sometimes, it's the smallest of clues that help us out. Comb through Rudolph's Reddit history and answer questions #1-5 below. You may need to use partial clues with a search engine to fill in the gaps.
@@ -28,14 +25,11 @@ Additional Resources:
 
 While Rudolph's posting history is enough for us to identify that he has other social media accounts, sometimes we are not that lucky. Great tools exist that allow us to search for user accounts across social media platforms. Sites, such as https://namechk.com/, https://whatsmyname.app/ and https://namecheckup.com/ will identify other possible accounts quickly for us. Tools, such as https://github.com/WebBreacher/WhatsMyName and https://github.com/sherlock-project/sherlock do this as well. Simply enter a username, hit search, and comb through the results. It's that easy!
 
-#### Task #2
+### Task #2
 
-Well it looks like you have uncovered Rudolph's Twitter
-
-Now we can read into all of his chitter
-
-Go through his profile and give it some views
-
+Well it looks like you have uncovered Rudolph's Twitter<br>
+Now we can read into all of his chitter<br>
+Go through his profile and give it some views<br>
 The deeper you dig, the better the clues
 
 
@@ -65,112 +59,112 @@ Christmas is saved, we brought Rudolph back
 
 ***
 
-What URL will take me directly to Rudolph's Reddit comment history?
+### What URL will take me directly to Rudolph's Reddit comment history?
 
 > https://www.reddit.com/user/IGuidetheClaus2020/comments/
 
 Google에 위 글에서 알려준 `IGuidetheClaus2020`을 검색한다.
 
-![google]()
+![google](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/google.png)
 
 두가지 페이지가 나오는데 Reddit Comment를 찾는 것이니 Reddit 페이지로 들어간 후 Comment 탭을 클릭한다.
 
-![comment]()
+![comment](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/comment.png)
 
-According to Rudolph, where was he born?
+### According to Rudolph, where was he born?
 
 > Chicago
 
 Comment를 읽어보면 단서를 얻을 수 있다.
 
-![born]()
+![born](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/born.png)
 
-Rudolph mentions Robert.  Can you use Google to tell me Robert's last name?
+### Rudolph mentions Robert.  Can you use Google to tell me Robert's last name?
 
 > May
 
 Google에 `Rudolph mentions Robert`를 검색하면 Wikipedia에서 Robert의 마지막 이름을 얻을 수 있다.
 
-![may]()
+![may](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/may.png)
 
-On what other social media platform might Rudolph have an account?
+### On what other social media platform might Rudolph have an account?
 
 > Twitter
 
 `IGuidetheClaus2020`을 검색했을 때 첫번째에 있던 Twitter 계정을 찾을 수 있다.
 
-![twitter]()
+![twitter](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/twitter.png)
 
-What is Rudolph's username on that platform?
+### What is Rudolph's username on that platform?
 
 > IGuideClaus2020
 
 해당 트위터 계정에 들어가면 사용자이름을 얻을 수 있다.
 
-![username]()
+![username](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/username.png)
 
-What appears to be Rudolph's favorite TV show right now?
+### What appears to be Rudolph's favorite TV show right now?
 
 > Bachelorette
 
 스크롤해 트윗한 내용을 찾아보면 Bachelorette라는 TV show를 찾을 수 있다.
 
-![show]
+![show](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/show.png)
 
-Based on Rudolph's post history, he took part in a parade.  Where did the parade take place?
+### Based on Rudolph's post history, he took part in a parade.  Where did the parade take place?
 
 > Chicago
 
 Parade에 간 사진 2개를 찾을 수 있는데 그 중 하나의 이미지 주소를 복사한다.
 
-![two]()
+![two](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/two.png)
 
-![copy]()
+![copy](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/copy.png)
 
 복사한 이미지 주소를 https://images.google.com 에 검색한다.
 
-![image]()
+![image](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/image.png)
 
 Chicago에서 parade가 열린 것을 확인할 수 있다.
 
-![search]()
+![search](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/search.png)
 
-Okay, you found the city, but where specifically was one of the photos taken?
+### Okay, you found the city, but where specifically was one of the photos taken?
 
 > 41.891815, -87.624277
 
 아래에 사진의 주소를 적은 글이 있다.
 
-![photo]()
+![photo](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/photo.png)
 
 해당 글을 클릭해 이미지의 주소를 복사한다.
 
-![location]()
+![location](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/location.png)
 
 http://exif.regex.info/ 사이트에 들어가 복사한 이미지 주소를 검색하면 위치와 플래그를 알 수 있다.
 
-![exif]()
+![exif](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/exif.png)
 
-Did you find a flag too?
+### Did you find a flag too?
 
 > {FLAG}ALWAYSCHECKTHEEXIFD4T4
 
-Has Rudolph been pwned? What password of his appeared in a breach?
+### Has Rudolph been pwned? What password of his appeared in a breach?
 
 > spygame
 
 https://scylla.sh/ 사이트가 없어 답만 기재했다.
 
-Based on all the information gathered.  It's likely that Rudolph is in the Windy City and is staying in a hotel on Magnificent Mile.  What are the street numbers of the hotel address?
+### Based on all the information gathered.  It's likely that Rudolph is in the Windy City and is staying in a hotel on Magnificent Mile.  What are the street numbers of the hotel address?
 
 > 540
 
 트위터 글에서 @Marriot 태그를 볼 수 있다. 해당 태그를 확인하면 Marriot 호텔인 것을 알 수 있다.
 
-![hotel]()
+![hotel](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/hotel.png)
 
 구글에 Marriot Magnificent Mile를 검색하면 도로주소를 알 수 있다.
 
 https://www.marriott.co.uk/hotels/travel/chidt-chicago-marriott-downtown-magnificent-mile/
 
-![street]()
+![street](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2014/image/street.png)
