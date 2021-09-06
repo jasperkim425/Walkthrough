@@ -7,13 +7,13 @@
 ## Walkthrough
 ![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%208/image/attackbox.png)
 
-When was Snort created?
+### When was Snort created?
 
 > 1998
 
 ![snort](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%208/image/snort.png)
 
-Using Nmap on 10.10.229.53 , what are the port numbers of the three services running?  (Please provide your answer in ascending order/lowest -> highest, separated by a comma)
+### Using Nmap on 10.10.229.53 , what are the port numbers of the three services running?  (Please provide your answer in ascending order/lowest -> highest, separated by a comma)
 
 > 80,2222,3389
 
@@ -33,9 +33,9 @@ $ sudo nmap -Pn 10.10.229.53
 
 ![nmap-Pn](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%208/image/nmap-Pn.png)
 
-Run a scan and provide the `-Pn` flag to ignore ICMP being used to determine if the host is up
+### Run a scan and provide the `-Pn` flag to ignore ICMP being used to determine if the host is up
 
-Experiment with different scan settings such as `-A` and `-sV` whilst comparing the outputs given.
+### Experiment with different scan settings such as `-A` and `-sV` whilst comparing the outputs given.
 
 ```
 $ sudo nmap -A -sV 10.10.229.53
@@ -80,11 +80,11 @@ Nmap done: 1 IP address (1 host up) scanned in 47.71 seconds
 
 ```
 
-Use Nmap to determine the name of the Linux distribution that is running, what is reported as the most likely distribution to be running?
+### Use Nmap to determine the name of the Linux distribution that is running, what is reported as the most likely distribution to be running?
 
 > ubuntu
 
-Use Nmap's Network Scripting Engine (NSE) to retrieve the "HTTP-TITLE" of the webserver. Based on the value returned, what do we think this website might be used for?
+### Use Nmap's Network Scripting Engine (NSE) to retrieve the "HTTP-TITLE" of the webserver. Based on the value returned, what do we think this website might be used for?
 
 > blog
 
@@ -94,4 +94,4 @@ $ sudo nmap --script http-title 10.10.229.53
 
 ![nmapscript](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%208/image/nmapscript.png)
 
-Now use different scripts against the remaining services to discover any further information about them
+### Now use different scripts against the remaining services to discover any further information about them
