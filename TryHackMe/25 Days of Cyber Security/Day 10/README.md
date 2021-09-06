@@ -7,7 +7,7 @@
 ## Walkthrough
 ![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2010/image/attackbox.png)
 
-Question #1 Using enum4linux, how many users are there on the Samba server (10.10.114.84)?
+### Question #1 Using enum4linux, how many users are there on the Samba server (10.10.114.84)?
 
 > 3
 
@@ -59,7 +59,7 @@ enum4linux complete on Tue Aug 31 04:10:48 2021
 
 ```
 
-Question #2 Now how many "shares" are there on the Samba server?
+### Question #2 Now how many "shares" are there on the Samba server?
 
 > 4
 
@@ -125,7 +125,7 @@ enum4linux complete on Tue Aug 31 04:14:13 2021
 
 ```
 
-Question #3 Use smbclient to try to login to the shares on the Samba server (10.10.114.84). What share doesn't require a password?
+### Question #3 Use smbclient to try to login to the shares on the Samba server (10.10.114.84). What share doesn't require a password?
 
 > tbfc-santa
 
@@ -139,7 +139,7 @@ Question #3 Use smbclient to try to login to the shares on the Samba server (10.
 
 tbfc-santa 디렉터리가 패스워드가 없이 접속됐다.
 
-Question #4 Log in to this share, what directory did ElfMcSkidy leave for Santa?
+### Question #4 Log in to this share, what directory did ElfMcSkidy leave for Santa?
 
 > jingle-tunes
 
