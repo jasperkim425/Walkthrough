@@ -19,7 +19,7 @@ Bonus: There are at least two ways of escalating your privileges after you gain 
 
 ![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/attackbox.png)
 
-What is the version number of the web server?
+### What is the version number of the web server?
 
 > 9.0.17
 
@@ -37,7 +37,7 @@ $ sudo nmap -Pn 10.10.97.244
 
 Apache Tomcat 9.0.17 버전으로 만들어진 사이트가 있다.
 
-What CVE can be used to create a Meterpreter entry onto the machine? (Format: CVE-XXXX-XXXX)
+### What CVE can be used to create a Meterpreter entry onto the machine? (Format: CVE-XXXX-XXXX)
 
 > CVE-2019-0232
 
@@ -45,7 +45,7 @@ What CVE can be used to create a Meterpreter entry onto the machine? (Format: CV
 
 https://www.exploit-db.com/exploits/47073
 
-Set your Metasploit settings appropriately and gain a foothold onto the deployed machine.
+### Set your Metasploit settings appropriately and gain a foothold onto the deployed machine.
 
 사이트의 취약점을 알아내기 위해서 글 위에서 제공한 `elfwhacker.bat`의 CGI 값을 찾아본다.
 
@@ -69,7 +69,7 @@ Set your Metasploit settings appropriately and gain a foothold onto the deployed
 
 meterpreter 환경을 얻었다는 것은 취약점 공격이 성공했다는 것이다.
 
-What are the contents of flag1.txt
+### What are the contents of flag1.txt
 
 > thm{whacking_all_the_elves}
 
@@ -77,4 +77,4 @@ What are the contents of flag1.txt
 
 ![flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2012/image/flag.png)
 
-Looking for a challenge? Try to find out some of the vulnerabilities present to escalate your privileges!
+### Looking for a challenge? Try to find out some of the vulnerabilities present to escalate your privileges!
