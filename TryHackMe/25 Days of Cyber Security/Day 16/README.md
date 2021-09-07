@@ -5,7 +5,7 @@
 - OS : kali-linux-2021.3
 
 ## Walkthrough
-![attackbox]()
+![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2016/image/attackbox.png)
 
 Oh no! Santa 🎅 has taken off, leaving you -- the faithful elves behind! Can you help find Santa's location?
 
@@ -25,7 +25,7 @@ Deploy the machine that is running Santa's Sled and allow a couple of minutes fo
 
 `nmap` 명령어를 사용해 포트 스캔을 진행한다.
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2016/image/nmap.png)
 
 ### Without using enumerations tools such as Dirbuster, what is the directory for the API?  (without the API key)
 
@@ -43,11 +43,11 @@ Find out the correct API key. Remember, this is an odd number between 0-100. Aft
 
 Day 15에서 아래와 같은 웹페이지의 링크를 가져오는 코드를 얻을 수 있다.
 
-![soup]()
+![soup](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2016/image/soup.png)
 
 해당 코드를 복사해 `webpage.py` 파일에 복사 후 `testurl.com` 부분에 내 아이피를 입력 후 실행한다.
 
-![webpage]()
+![webpage](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2016/image/webpage.png)
 
 오류가 발생해 실행이 되지 않았다. 해당 코드를 아래와 같이 수정 후 다시 실행하면 웹페이지 코드를 얻을 수 있다.
 
@@ -76,7 +76,7 @@ for link in links:
 
 위와 같이 수정한 코드를 다시 실행하면 웹페이지 모든 링크가 나온다.
 
-![link]()
+![link](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2016/image/link.png)
 
 api key의 단서를 찾았다. api key는 0부터 100까지의 숫자이므로 키를 찾을 새로운 코드 `apikey.py`를 만든다.<br>
 코드를 만들 때 위에서 너무 많은 횟수를 시도하면 IP 주소를 벤한다고 되어 있으니 홀수 먼저 진행한다.
@@ -91,8 +91,8 @@ for api_key in range(1,100,2):
 
 위와 같이 코드를 만든 후 실행하면 57번째에서 에러가 나지 않았다.
 
-![57]()
+![57](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2016/image/57.png)
 
 해당 api key 주소를 입력해 들어가면 santa가 있는 주소를 알 수 있다.
 
-![locate]()
+![locate](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/25%20Days%20of%20Cyber%20Security/Day%2016/image/locate.png)
