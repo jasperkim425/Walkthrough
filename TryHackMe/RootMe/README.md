@@ -4,7 +4,7 @@
 - Virtual Box : VMware Fusion 12.1.2
 - OS : kali-linux-2021.3
 
-## Walkthrough
+# Walkthrough
 ### Task 1 | Deploy the machine
 Connect to TryHackMe network and deploy the machine. If you don't know how to do this, complete the OpenVPN room first.
 
