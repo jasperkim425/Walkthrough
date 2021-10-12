@@ -24,7 +24,7 @@ VEhNe2p1NTdfZDNjMGQzXzdoM19iNDUzfQ==
 아래 사이트에서 base64로 암호화된 코드를 해독할 수 있다.<br>
 https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true)
 
-![task1flag]()
+![task2flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task2flag.png)
 
 ## Task 3 | Meta meta 
 Meta! meta! meta! meta...................................
@@ -37,11 +37,11 @@ Meta! meta! meta! meta...................................
 
 파일을 다운받는다.
 
-![task3file]()
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task3file.png" width="500px" height="350px" title="task3file" alt="task3file"></img><br/>
 
 다운받은 파일을 `exiftool` 모듈을 사용해 flag를 찾는다.
 
-![task3flag]()
+![task3flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task3flag.png)
 
 ## Task 4 | Mon, are we going to be okay?
 Something is hiding. That's all you need to know.
@@ -54,14 +54,14 @@ Something is hiding. That's all you need to know.
 
 파일을 다운받는다.
 
-![task4file]()
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task4file.png" width="500px" height="350px" title="task4file" alt="task4file"></img><br/>
 
 스테가노그래피 수법을 이용해 이미지 안에 텍스트를 암호화 했다.<br>
 https://futureboy.us/stegano/decinput.html 이 사이트에서 이미지를 해독하여 flag를 얻을 수 있다.
 
-![task4decode]()
+![task4decode](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task4decode.png)
 
-![task4flag]()
+![task4flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task4flag.png)
 
 ## Task 5 | Erm......Magick
 Huh, where is the flag?
@@ -74,7 +74,7 @@ Huh, where is the flag?
 
 문제를 드래그하면 flag를 얻을 수 있다.
 
-![task5flag]()
+![task5flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task5flag.png)
 
 ## Task 6 | QRrrrr
 Such technology is quite reliable.
@@ -87,13 +87,13 @@ Such technology is quite reliable.
 
 파일을 다운받는다.
 
-![task6file]()
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task6file.png" width="500px" height="350px" title="task6file" alt="task6file"></img><br/>
 
 다운받은 QR 코드 이미지 파일은 아래 사이트에서 스캔할 수 있다.
 
 https://4qrcode.com/scan-qr-code.php
 
-![task6flag]()
+![task6flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task6flag.png)
 
 ## Task 7 | Reverse it or read it?
 Both works, it's all up to you.
@@ -106,11 +106,11 @@ Both works, it's all up to you.
 
 파일을 다운받는다.
 
-![task7file]()
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task7file.png" width="500px" height="210px" title="task7file" alt="task7file"></img><br/>
 
 해당 파일이 깨져서 나오지만 잘 읽어보면 중간에 깨지지 않은 문자들 중에 flag를 얻을 수 있다.
 
-![task7flag]()
+![task7flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task7flag.png)
 
 ## Task 8 | Another decoding stuff
 Can you decode it?
@@ -125,7 +125,7 @@ Can you decode it?
 
 암호화 된 코드는 `https://gchq.github.io/CyberChef/#recipe=From_Base58('123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz',true)` 사이트에서 해독할 수 있다.
 
-![task8flag]()
+![task8flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task8flag.png)
 
 ## Task 9 | Left or right
 Left, right, left, right... Rot 13 is too mainstream. Solve this
@@ -140,11 +140,11 @@ MAF{atbe_max_vtxltk}
 
 해당 코드는 https://gchq.github.io/CyberChef/#recipe=ROT13(true,true,false,13) 해독할 수 있다.
 
-![task9rot13]()
+![task9rot13](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task9rot13.png)
 
 하지만 값이 나오지 않아 Amount 값을 계속 올렸더니 33에서 flag를 얻을 수 있었다.
 
-![task9flag]()
+![task9flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task9flag.png)
 
 ## Task 10 | Make a comment
 No downloadable file, no ciphered or encoded text. Huh .......
@@ -159,7 +159,7 @@ No downloadable file, no ciphered or encoded text. Huh .......
 
 왼쪽에 마우스 버튼을 클릭 후 문제를 클릭하면 flag를 얻을 수 있다.
 
-![task10flag]()
+![task10flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task10flag.png)
 
 ## Task 11 | Can you fix it?
 I accidentally messed up with this PNG file. Can you help me fix it? Thanks, ^^
@@ -172,21 +172,21 @@ I accidentally messed up with this PNG file. Can you help me fix it? Thanks, ^^
 
 파일을 다운받는다.
 
-![task11file]()
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task11file.png" width="500px" height="350px" title="task11file" alt="task11file"></img><br/>
 
 다운받은 파일을 열려고 png 파일의 헤더가 달라 열리지 않는다. 그래서 `xxd` 모듈을 사용해 hex 코드로 변환시켜준 파일을 텍스트 파일로 저장한다.
 
-![task11xxd]()
+![task11xxd](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task11xxd.png)
 
-![task11head]()
+![task11head](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task11head.png)
 
 저장된 파일의 헤더를 나노 편집기로 png 시그니처인 `89504E470D0A1A0A`로 변경해준다.
 
-![task11nano]()
+![task11nano](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task11nano.png)
 
 변경한 파일을 https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')Render_Image('Raw') 사이트에서 파일을 열면 플래그를 얻을 수 있다.
 
-![task11flag]()
+![task11flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task11flag.png)
 
 ## Task 12 | Read it 
 Some hidden flag inside Tryhackme social account.
@@ -201,7 +201,7 @@ Some hidden flag inside Tryhackme social account.
 
 https://www.reddit.com/r/tryhackme/comments/eizxaq/new_room_coming_soon/ 사이트에서 찾을 수 있다.
 
-![task12flag]()
+![task12flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task12flag.png)
 
 ## Task 13 | Spin my head
 What is this?
@@ -216,7 +216,7 @@ What is this?
 
 https://www.dcode.fr/brainfuck-language 사이트에서 암호를 해독할 수 있다.
 
-![task13flag]()
+![task13flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task13flag.png)
 
 ## Task 14 | An exclusive!
 Exclusive strings for everyone!
@@ -232,7 +232,7 @@ S2: 1010101010101010101010101010101010
 
 http://xor.pw/ 온라인 XOR 계산 사이트에서 두개의 코드를 입력하면 플래그를 얻을 수 있다.
 
-![task14flag]()
+![task14flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task14flag.png)
 
 ## Task 15 | Binary walk
 Please exfiltrate my file :)
@@ -245,15 +245,15 @@ Please exfiltrate my file :)
 
 파일을 다운받는다.
 
-![task15file]()
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task15file.png" width="500px" height="350px" title="task15file" alt="task15file"></img><br/>
 
 다운받은 파일을 `binwalk -e` 명령어를 사용해 자동으로 파일 안에 있는 내부파일을 추출하면 텍스트 파일을 찾았다.
 
-![task15binwalk]()
+![task15binwalk](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task15binwalk.png)
 
 텍스트 파일을 확인하면 플래그를 얻을 수 있다.
 
-![task15flag]()
+![task15flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task15flag.png)
 
 ## Task 16 | Darkness
 There is something lurking in the dark.
@@ -266,7 +266,7 @@ There is something lurking in the dark.
 
 파일을 다운받는다.
 
-![task16file]()
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task16file.png" width="500px" height="350px" title="task16file" alt="task16file"></img><br/>
 
 `stegsolve`라는 모듈을 설치해야한다. 아래와 같이 명령어를 입력해 다운받는다.
 
@@ -275,17 +275,17 @@ $ wget http://www.caesum.com/handbook/Stegsolve.jar -O stegsolve.jar
 $ chmod +x stegsolve.jar
 ```
 
-![task16stegsolve]()
+![task16stegsolve](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task16stegsolve.png)
 
 실행 권한을 줬다면 해당 파일을 실행 후 다운받은 이미지를 연다.
 
 `./stegsolve.jar`
 
-![task16open]()
+![task16open](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task16open.png)
 
 해당 이미지를 추적하면 플래그를 얻을 수 있다.
 
-![task16flag]()
+![task16flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task16flag.png)
 
 ## Task 17 | A sounding QR
 How good is your listening skill?
@@ -300,15 +300,15 @@ P/S: The flag formatted as THM{Listened Flag}, the flag should be in All CAPS
 
 파일을 다운받는다.
 
-![task17file]()
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task17file.png" width="500px" height="350px" title="task17file" alt="task17file"></img><br/>
 
 다운받은 파일을 https://4qrcode.com/scan-qr-code.php 사이트에서 스캔하면 웹사이트 하나를 얻을 수 있다.
 
-![task17qr]()
+![task17qr](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task17qr.png)
 
 해당 웹사이트의 사운드에서 플래그를 얻을 수 있다.
 
-![task17flag]()
+![task17flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task17flag.png)
 
 ## Task 18 | Dig up the past
 Sometimes we need a 'machine' to dig the past
@@ -322,11 +322,11 @@ Targetted time: 2 January 2020
 
 https://archive.org/web/ 사이트에서 웹페이지의 히스토리를 찾을 수 있다.
 
-![task18web]()
+![task18web](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task18web.png)
 
 위에서 주어진 사이트를 검색해 시간을 검색하면 플래그를 얻을 수 있다.
 
-![task18flag]()
+![task18flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task18flag.png)
 
 ## Task 19 | Uncrackable!
 Can you solve the following? By the way, I lost the key. Sorry >.<
@@ -343,7 +343,7 @@ Flag format: TRYHACKME{FLAG IN ALL CAP}
 
 https://www.dcode.fr/vigenere-cipher 사이트에서 문제를 해결할 수 있다. 주어진 문제를 입력 후 AUTOMATIC DECRYPTION를 입력하면 자동으로 해독하는데 그 중 플래그 있다.
 
-![task19flag]()
+![task19flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task19flag.png)
 
 ## Task 20 | Small bases
 Decode the following text.
@@ -358,11 +358,11 @@ Decode the following text.
 
 https://www.rapidtables.com/convert/number/decimal-to-hex.html 사이트에서 코드를 Hex 코드로 변환할 수 있다.
 
-![task20hex]()
+![task20hex](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task20hex.png)
 
 변환되어 나온 Hex 코드를 https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto') 사이트에서 변환하면 플래그를 얻을 수 있다.
 
-![task20flag]()
+![task20flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task20flag.png)
 
 ## Task 21 | Read the packet
 I just hacked my neighbor's WiFi and try to capture some packet. He must be up to no good. Help me find it.
@@ -375,7 +375,7 @@ I just hacked my neighbor's WiFi and try to capture some packet. He must be up t
 
 파일을 다운받는다.
 
-![task21file]()
+<img src="https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task21file.png" width="500px" height="350px" title="task21file" alt="task21file"></img><br/>
 
 다운받은 파일을 `wireshark`로 연다.
 
@@ -383,4 +383,4 @@ I just hacked my neighbor's WiFi and try to capture some packet. He must be up t
 
 와이어샤크에서 `tcp.stream eq 42` 필터를 입력하면 /flag.txt 파일을 GET 요청으로 가져온 흔적이 있다. 우리는 /flag.txt 오픈된 파일을 확인하면 플래그를 얻을 수 있다.
 
-![task21flag]()
+![task21flag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/CTF%20collection%20Vol.1/image/task21flag.png)
