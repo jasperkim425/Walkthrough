@@ -4,13 +4,13 @@
 - Virtual Box : VMware Fusion 12.1.2
 - OS : kali-linux-2021.3
 
-# Walkthrough
+## Walkthrough
 ### Task 1 | Deploy the machine
 Connect to TryHackMe network and deploy the machine. If you don't know how to do this, complete the OpenVPN room first.
 
 ***
 
-### Deploy the machine
+#### Deploy the machine
 ![attackbox](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/RootMe/image/attackbox.png)
 
 ***
@@ -20,7 +20,7 @@ First, let's get information about the target.
 
 ***
 
-### Scan the machine, how many ports are open?
+#### Scan the machine, how many ports are open?
 
 > 2
 
@@ -28,17 +28,17 @@ nmap으로 포트를 검색하면 22, 80번 포트 2개가 열려있는 것을 �
 
 ![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/RootMe/image/nmap.png)
 
-### What version of Apache is running?
+#### What version of Apache is running?
 
 > 2.4.29
 
 80번 포트에 열려있는 apache 서버의 버전을 확인한다.
 
-### What service is running on port 22?
+#### What service is running on port 22?
 
 > ssh
 
-### Find directories on the web server using the GoBuster tool.
+#### Find directories on the web server using the GoBuster tool.
 
 `gobuster`로 웹서버의 디렉터리를 찾아보면 눈에 보이는 2개의 디렉터리가 있다.<br>
 
@@ -52,7 +52,7 @@ nmap으로 포트를 검색하면 22, 80번 포트 2개가 열려있는 것을 �
 
 ![panel](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/RootMe/image/panel.png)
 
-### What is the hidden directory?
+#### What is the hidden directory?
 
 > /panel/
 
@@ -61,7 +61,7 @@ Find a form to upload and get a reverse shell, and find the flag.
 
 ***
 
-### user.txt
+#### user.txt
 
 > THM{y0u_g0t_a_sh3ll}
 
@@ -110,7 +110,7 @@ Now that we have a shell, let's escalate our privileges to root.
 
 ***
 
-### Search for files with SUID permission, which file is weird?
+#### Search for files with SUID permission, which file is weird?
 
 > /usr/bin/python
 
@@ -122,11 +122,11 @@ SUID 권한이 있는 파일을 찾기 위해 다음과 같은 명령어를 사�
 
 ![python](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/RootMe/image/python.png)
 
-### Find a form to escalate your privileges.
+#### Find a form to escalate your privileges.
 
-### root.txt
+#### root.txt
 
->
+> THM{pr1v1l3g3_3sc4l4t10n}
 
 https://gtfobins.github.io/gtfobins/python/ 에서 권한을 얻을 수 있는 방법을 알 수 있다.
 
