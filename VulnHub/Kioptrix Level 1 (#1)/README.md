@@ -5,7 +5,7 @@
 - OS : kali-linux-2022.01
 
 ## Walkthrough
-<a href="https://www.vulnhub.com/entry/kioptrix-level-1-1,22/" target="_blank">https://www.vulnhub.com/entry/kioptrix-level-1-1,22/</a>
+[https://www.vulnhub.com/entry/kioptrix-level-1-1,22/](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)
 
 KIOPTRIX: LEVEL 1 (#1) 에 대한 가상머신은 위 사이트에서 다운받을 수 있다.
 
