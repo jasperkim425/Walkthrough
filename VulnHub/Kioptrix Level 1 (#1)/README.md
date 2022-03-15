@@ -11,43 +11,43 @@ KIOPTRIX: LEVEL 1 (#1) 에 대한 가상머신은 위 사이트에서 다운받�
 
 해당 가상머신을 다운받은 후 VMware 워크스테이션에서 열어 활성화 시킨다.
 
-![kioptrix level 1]()
+![kioptrix level 1](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/kioptrix_level_1.png)
 
 가상머신의 아이피 주소를 알기 위해 `ip addr` 명령어를 사용해 IP 대역을 확인한다.
 
-![ip addr]()
+![ip addr](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/ip_addr.png)
 
 IP 대역을 확인해 보니 192.168.159.0/24 대역을 사용 중이다.
 
 그럼 이 대역에서 사용하는 클라이언트들을 확인하기 위해 `nmap -sn` 명령어를 사용해 확인한다.
 
-![nmap-sn]()
+![nmap-sn](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/nmap-sn.png)
 
 내 아이피는 `192.168.159.128` 이므로 Kioptrix Level 1의 가상머신 아이피는 `192.168.159.129`이다.
 
 그럼 가상머신에 열려있는 포트와 버전을 알기 위해 `nmap -sT -sV` 명령어로 네트워크 스캔을 한다.
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/nmap.png)
 
 80번 포트에 http 서버가 열려있다. 80번 포트에 대한 취약점이 있는지 `searchexploit` 명령어를 버전에 맞게 검색한다.
 
-![searchexploit]()
+![searchexploit](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/searchexploit.png)
 
 `OpenSSL/0.9.6b` 에 OpenFuck.c 라는 취약점이 발견됐다. 가장 최신버전인 파일을 `searchexploit -m 47080` 명령어를 사용해 내 디렉터리에 복사해 온다.
 
-![copy]()
+![copy](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/copy.png)
 
 복사한 파일을 확인해 보면 다음과 같이 컴파일하라는 명령어가 있다.
 
-![47080]()
+![47080](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/47080.png)
 
 그럼 안내해준 명령어를 사용해 해당 파일을 컴파일 한다.
 
-![gcc]()
+![gcc](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/gcc.png)
 
 컴파일된 파일을 실행해 보면 사용할 수 있는 옵션들이 나오는데, 그 중 취약점으로 발견된 `OpenSSL/0.9.6b` 에 대한 옵션을 찾는다.
 
-![0x6b]()
+![0x6b](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/0x6b.png)
 
 `0x6b` 옵션을 사용해 가상머신의 루트 권한을 획득해 본다.
 
@@ -95,11 +95,11 @@ bash-2.05$
 
 `git clone https://github.com/heltonWernik/OpenFuck.git`
 
-![git]()
+![git](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/git.png)
 
-![compile]
+![compile](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/compile.png)
 
-다시 컴파일 후 실행해 보면 루트 권한을 얻은 쉘을 얻을 수 있다.
+다시 컴파일된  실행해 보면 루트 권한을 얻은 쉘을 얻을 수 있다.
 
 ```
 ┌──(kali㉿kali)-[~/vulnhub/kioptrix1/OpenFuck]
