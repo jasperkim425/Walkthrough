@@ -45,7 +45,7 @@ IP 대역을 확인해 보니 192.168.159.0/24 대역을 사용 중이다.
 
 ![gcc](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/gcc.png)
 
-컴파일된 파일을 실행해 보면 사용할 수 있는 옵션들이 나오는데, 그 중 취약점으로 발견된 `OpenSSL/0.9.6b` 에 대한 옵션을 찾는다.
+컴파일된 파일을 실행해 보면 사용할 수 있는 옵션들이 나오는데, 그 중 취약점으로 발견된 `RedHat Linux apache-1.3.20-16` 에 대한 옵션을 찾는다.
 
 ![0x6b](https://github.com/jasperkim425/Walkthrough/blob/main/VulnHub/Kioptrix%20Level%201%20(%231)/image/0x6b.png)
 
