@@ -1,5 +1,5 @@
 # Codebook
-![Codebook](https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/Cryptography/Mod%2026/image/Mod_26.png)
+![Codebook](https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/General%20Skills/Codebook/image/Codebook.png)
 
 ## Hint
 1. On the webshell, use ls to see if both files are in the directory you are in
@@ -12,7 +12,7 @@
 ## Walkthrough
 문제를 풀기 위해 두개의 코드를 다운받는다.
 
-![download](https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/Cryptography/Mod%2026/image/Mod_26.png)
+![download](https://github.com/jasperkim425/Walkthrough/blob/main/picoCTF/General%20Skills/Codebook/image/download.png)
 
 우선 다운받은 `code.py` 파일을 살펴보면 `codebook.txt` 파일을 이용해야 할 것 같다.
 
