@@ -3,7 +3,7 @@
 ![main](https://github.com/jasperkim425/Walkthrough/blob/main/ctf-d.com/%EC%9A%B0%EB%A6%AC%EB%8A%94%20%EC%9D%B4%20%ED%8C%8C%EC%9D%BC%EC%97%90%20%ED%94%8C%EB%9E%98%EA%B7%B8%EB%A5%BC/image/main.png)
 
 ## Workstation
-* OS : Window 10
+* OS : Windows 10
 
 ## Walkthrough
 
