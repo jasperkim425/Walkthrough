@@ -1,6 +1,6 @@
 # Three Thieves Threw Trumpets Through Trees
 
-![main]()
+![main](https://github.com/jasperkim425/Walkthrough/blob/main/ctf-d.com/Three%20Thieves%20Threw%20Trumpets%20Through%20Trees/image/main.png)
 
 ## Workstation
 * OS : Windows 10
@@ -11,7 +11,7 @@
 
 해당 파일의 기본 데이터들을 확인하기 위해 https://exif.tools/ 에서 메타데이터를 확인한다.
 
-![filedata]()
+![filedata](https://github.com/jasperkim425/Walkthrough/blob/main/ctf-d.com/Three%20Thieves%20Threw%20Trumpets%20Through%20Trees/image/filedata.png)
 
 이 파일은 이미지 파일이 아닌 wav 파일이다. wav 파일은 오디오 파일이다.
 
@@ -23,7 +23,7 @@
 
 속도를 낮춰도 이상한 소리가 들리니 파일을 역재생 해봤다. 효과 -> 뒤집기:좌우로
 
-![flag]()
+![flag](https://github.com/jasperkim425/Walkthrough/blob/main/ctf-d.com/Three%20Thieves%20Threw%20Trumpets%20Through%20Trees/image/flag.png)
 
 그러면 패스워드 is abracadabra 라는 소리가 들렸다.
 
