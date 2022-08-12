@@ -3,7 +3,7 @@
 ![main](https://github.com/jasperkim425/Walkthrough/blob/main/ctf-d.com/Find%20Key(butterfly)/image/main.png)
 
 ## Workstation
-* OS : Window 10
+* OS : Windows 10
 
 ## Walkthrough
 
