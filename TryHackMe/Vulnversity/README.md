@@ -12,7 +12,7 @@ Connect to our network and deploy this machine. If you are unsure on how to get 
 
 Deploy the machine
 
-![machine]()
+![machine](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/machine.png)
 
 ### Task 2 | Reconnaissance
 Gather information about this machine using a network scanning tool called nmap. Check out the Nmap room for more on this!
@@ -50,7 +50,7 @@ nmap flag	Description
 
 `nmap -sV`를 사용해 포트를 스캔하면 6개의 포트가 열려있다.
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/nmap.png)
 
 * What version of the squid proxy is running on the machine?
 
@@ -64,7 +64,7 @@ nmap flag	Description
 
 -p-400 플래그는 400 이하의 포트를 스캔하는 것이다. 총 3개가 나온다.
 
-![p-400]()
+![p-400](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/p-400.png)
 
 * Using the nmap flag -n what will it not resolve?
 
@@ -72,7 +72,7 @@ nmap flag	Description
 
 `nmap -h` 로 도움말을 살펴보면 -n에 대해 나와있다.
 
-![nmap-n]()
+![nmap-n](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/nmap-n.png)
 
 * What is the most likely operating system this machine is running?
 
@@ -80,7 +80,7 @@ nmap flag	Description
 
 아래 사진에서 알 수 있듯이 ssh와 http가 ubuntu로 실행되고 있다.
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/nmap.png)
 
 * What port is the web server running on?
 
@@ -124,11 +124,11 @@ GoBuster flag	Description
 
 gobuster로 디렉터리를 검색한다.
 
-![gobuster]()
+![gobuster](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/gobuster.png)
 
 /internal 에서 업로드 할 수 있는 폼이 나온다.
 
-![internal]()
+![internal](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/internal.png)
 
 ### Task 4 | Compromise the webserver
 Now you have found a form to upload files, we can leverage this to upload and execute our payload that will lead to compromising the web server.
@@ -140,6 +140,8 @@ Now you have found a form to upload files, we can leverage this to upload and ex
 > .php
 
 internal의 소스를 확인하면 index.php 파일이 보인다.
+
+![source](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/source.png)
 
 To identify which extensions are not blocked, we're going to fuzz the upload form.
 
@@ -161,19 +163,21 @@ Click the "Positions" tab now, find the filename and "Add §" to the extension. 
 
 이때 위에서 알려주듯이 burpsuite를 연결해 intercept is on으로 한 후 업로드하면 아래와 같이 인터셉트 한다.
 
-![intercept]()
+![intercept](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/intercept.png)
 
 마우스 우클릭 해 go to Intruder를 입력해 Positions에서 아래와 같이 .php만 설정해 준다.
 
-![positions]()
+![positions](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/positions.png)
 
 그 다음 Payloads의 list에 아래와 같이 입력한다.
 
-![list]()
+또한 Payload Encoding 체크를 해제한다.
+
+![list](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/list.png)
 
 start attack을 누르면 .phtml만 길이가 다르게 나와 Response를 눌러 아래를 확인하면 Success가 나와 .phtml 확장자만 허용하는 것을 알아냈다.
 
-![phtml]()
+![phtml](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/phtml.png)
 
 Now we know what extension we can use for our payload we can progress.
 
@@ -203,17 +207,17 @@ sudo git clone https://github.com/pentestmonkey/php-reverse-shell.git
 
 위 명령어를 입력해 php 리버스 쉘 코드를 가져온다.
 
-![git]()
+![git](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/git.png)
 
 .phtml 확장자만 업로드가 가능하기 때문에 .phtml로 확장자를 바꿔준다.(sudo를 사용해 바꾼다.)
 
-![mv]()
+![mv](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/mv.png)
 
 다시 한번 sudo를 사용해 리버스 쉘 코드를 알맞게 편집한다.
 
 IP 주소에 openvpn tryhackme IP 주소를 입력한다.
 
-![ip]()
+![ip](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/ip.png)
 
 이제 리버스 쉘 파일을 업로드 한 후 실행시키기 전 `sudo nc -lvnp 1234'로 리스닝 시킨다. 
 
@@ -221,7 +225,7 @@ IP 주소에 openvpn tryhackme IP 주소를 입력한다.
 
 home 으로 이동해 계정을 확인한다.
 
-![shell]()
+![shell](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/shell.png)
 
 * What is the user flag?
 
@@ -229,7 +233,7 @@ home 으로 이동해 계정을 확인한다.
 
 user.txt 파일도 확인한다.
 
-![userflag]()
+![userflag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/userflag.png)
 
 ### Task 5 | Privilege Escalation
 Now you have compromised this machine, we are going to escalate our privileges and become the superuser (root).
@@ -246,7 +250,7 @@ For example, the binary file to change your password has the SUID bit set on it 
 
 SUID를 찾기 위해 `find / -perm -4000 2>/dev/null을 사용해 확인하면 systemctl이 있다.
 
-![find]()
+![find](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/find.png)
 
 Its challenge time! We have guided you through this far, are you able to exploit this system further to escalate your privileges and get the final answer?
 
@@ -262,9 +266,9 @@ systemctl의 root 권한 상승을 알아보기 위해 https://gtfobins.github.i
 
 나는 id를 /tmp/output으로 저장하는 것이 아닌 root.txt파일을 /tmp/output으로 저장하게 명령어를 수정했다.
 
-![gtfo]()
+![gtfo](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/gtfo.png)
 
 모든 입력이 다 되었다면 /tmp/output 파일을 확인한다.
 
-![rootflag]()
+![rootflag](https://github.com/jasperkim425/Walkthrough/blob/main/TryHackMe/Vulnversity/image/rootflag.png)
 
