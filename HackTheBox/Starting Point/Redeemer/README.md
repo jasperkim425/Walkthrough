@@ -13,7 +13,7 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 * Spawn Machine | Click to Spawn the machine
 
-![machine]()
+![machine](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Redeemer/image/machine.png)
 
 * Task 1 | Which TCP port is open on the machine?
 
@@ -23,7 +23,7 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 그래서 추가로 10000 포트 까지 검색했더니 포트가 나왔다. 
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Redeemer/image/nmap.png)
 
 * Task 2 | Which service is running on the port that is open on the machine?
 
@@ -35,7 +35,7 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 구글에 redis를 검색해 홈페이지를 들어갔더니 정답이 나와있다. 
 
-![in]()
+![in](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Redeemer/image/in.png)
 
 * Task 4 | Which command-line utility is used to interact with the Redis server? Enter the program name you would enter into the terminal without any arguments.
 
@@ -43,7 +43,7 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 다시 구글에 command-line redis를 검색하면 다시 한번 홈페이지에서 정답을 얻었다.
 
-![cli]()
+![cli](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Redeemer/image/cli.png)
 
 * Task 5 | Which flag is used with the Redis command-line utility to specify the hostname?
 
@@ -55,7 +55,7 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 홈페이지에서 command를 확인한다.
 
-![info]()
+![info](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Redeemer/image/info.png)
 
 * Task 7 | What is the version of the Redis server being used on the target machine?
 
@@ -65,7 +65,7 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 > SELECT
 
-![select]()
+![select](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Redeemer/image/select.png)
 
 * Task 9 | How many keys are present inside the database with index 0?
 
@@ -85,13 +85,13 @@ sudo redis-cli -h 10.129.90.247
 
 `INFO` 명령어를 사용하면 아래에 key 개수가 나와있다.
 
-![key]()
+![key](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Redeemer/image/key.png)
 
 * Task 10 | Which command is used to obtain all the keys in a database?
 
 > KEYS * 
 
-![keys]()
+![keys](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Redeemer/image/keys.png)
 
 * Submit Flag | Submit root flag 
 
@@ -101,7 +101,7 @@ sudo redis-cli -h 10.129.90.247
 
 `"flag"`라는 키를 `GET`으로 데이터를 확인한다.
 
-![flag]()
+![flag](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Redeemer/image/flag.png)
 
 
 
