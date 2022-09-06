@@ -17,7 +17,7 @@ sudo openvpn starting_point_<id>.ovpn
 
 vpn 실행 후 새로고침을 누르면 머신을 활성화 시킬 수 있다.
 
-![machine]()
+![machine](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Meow/image/machine.png)
 
 * Task 1 | What does the acronym VM stand for?
 
@@ -43,7 +43,7 @@ VM이란 Virtual Machine의 약자이다.
 
 tunnel interface의 약자는 tun이다. `ifconfig` 명령어로 확인 가능하다.
 
-![ifconfig]()
+![ifconfig](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Meow/image/ifconfig.png)
 
 * Task 5 | What tool do we use to test our connection to the target with an ICMP echo request?
 
@@ -51,7 +51,7 @@ tunnel interface의 약자는 tun이다. `ifconfig` 명령어로 확인 가능�
 
 ICMP echo request로 연결 확인하는 것은 `ping` 이다.
 
-![ping]()
+![ping](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Meow/image/ping.png)
 
 * Task 6 | What is the name of the most common tool for finding open ports on a target?
 
@@ -59,7 +59,7 @@ ICMP echo request로 연결 확인하는 것은 `ping` 이다.
 
 열려있는 포트 검색은 주로 nmap 을 사용한다.
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Meow/image/nmap.png)
 
 * Task 7 | What service do we identify on port 23/tcp during our scans?
 
@@ -75,9 +75,9 @@ telnet 서버가 열려있으니 접속한다.
 
 하지만 아이디와 패스워드가 필요한데 admin, administrator, root 를 차례대로 입력하다가 root로 패스워드 없이 접속이 가능했다.
 
-![telnet]()
+![telnet](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Meow/image/telnet.png)
 
-![root]()
+![root](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Meow/image/root.png)
 
 * Submit Flag | Submit root flag
 
@@ -85,4 +85,4 @@ telnet 서버가 열려있으니 접속한다.
 
 목록을 확인하면 플래그를 얻을 수 있다.
 
-![flag]()
+![flag](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Meow/image/flag.png)
