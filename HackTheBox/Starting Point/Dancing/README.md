@@ -13,7 +13,7 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 * Spawn Machine | Click to Spawn the machine
 
-![machine]()
+![machine](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Dancing/image/machine.png)
 
 * Task 1 | What does the 3-letter acronym SMB stand for?
 
@@ -29,11 +29,11 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 `nmap` 으로 포트 스캔을 하면 445번 포트에 열려있는 서비스를 확인한다.
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Dancing/image/nmap.png)
 
 * Task 4 | What is the 'flag' or 'switch' we can use with the SMB tool to 'list' the contents of the share?
 
-> -l
+> -L
 
 * Task 5 | How many shares are there on Dancing?
 
@@ -41,7 +41,7 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 `smbclient`를 사용해 리스트를 확인한다. 
 
-![smb]()
+![smb](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Dancing/image/smb.png)
 
 * Task 6 | What is the name of the share we are able to access in the end with a blank password?
 
@@ -59,8 +59,8 @@ sudo openvpn starting_Point_<ID>.ovpn
 
 WorkShares 안에 두개의 디렉터리가 있는데 James.P 의 날짜가 혼자만 다르니 James.P를 확인해 flag.txt 파일을 `get`으로 가져온다.
 
-![get]()
+![get](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Dancing/image/get.png)
 
 `get`으로 가져온 flag.txt 파일을 확인한다.
 
-![flag]()
+![flag](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Dancing/image/flag.png)
