@@ -35,7 +35,7 @@ VM이란 Virtual Machine의 약자이다.
 
 > openvpn
 
-첫번째에서 openvpn으로 vpn을 연결했다.
+첫번째에서 `openvpn`으로 vpn을 연결했다.
 
 * Task 4 | What is the abbreviated name for a 'tunnel interface' in the output of your VPN boot-up sequence output?
 
@@ -57,7 +57,7 @@ ICMP echo request로 연결 확인하는 것은 `ping` 이다.
 
 > nmap
 
-열려있는 포트 검색은 주로 nmap 을 사용한다.
+열려있는 포트 검색은 주로 `nmap` 을 사용한다.
 
 ![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Meow/image/nmap.png)
 
@@ -65,15 +65,15 @@ ICMP echo request로 연결 확인하는 것은 `ping` 이다.
 
 > telnet
 
-nmap 으로 telnet 서버가 23번 포트에 열려있다.
+`nmap` 으로 telnet 서버가 23번 포트에 열려있다.
 
 * Task 8 | What username is able to log into the target over telnet with a blank password?
 
 > root
 
-telnet 서버가 열려있으니 접속한다.
+`telnet` 서버가 열려있으니 접속한다.
 
-하지만 아이디와 패스워드가 필요한데 admin, administrator, root 를 차례대로 입력하다가 root로 패스워드 없이 접속이 가능했다.
+하지만 아이디와 패스워드가 필요한데 admin, administrator, root 를 차례대로 입력하다가 `root`로 패스워드 없이 접속이 가능했다.
 
 ![telnet](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Meow/image/telnet.png)
 
