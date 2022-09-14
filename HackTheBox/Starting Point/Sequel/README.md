@@ -14,7 +14,7 @@ sudo openvpn starting_point_<id>.ovpn
 
 * Spawn Machine | Click to Spawn the machine
 
-![machine]()
+![machine](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Sequel/image/machine.png)
 
 * Task 1 | What does the acronym SQL stand for?
 
@@ -26,7 +26,7 @@ sudo openvpn starting_point_<id>.ovpn
 
 nmap을 사용해 포트 검색을 한다.
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Sequel/image/nmap.png)
 
 * Task 3 | What community-developed MySQL version is the target running?
 
@@ -38,7 +38,7 @@ nmap을 사용해 포트 검색을 한다.
 
 `sudo mysql --help` 명령어를 사용해 username 옵션을 찾는다.
 
-![user]()
+![user](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Sequel/image/user.png)
 
 
 * Task 5 | Which username allows us to log into MariaDB without providing a password?
@@ -59,10 +59,10 @@ nmap을 사용해 포트 검색을 한다.
 
 `mysql`에 접속한다.
 
-![mysql]()
+![mysql](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Sequel/image/mysql.png)
 
 이제 플래그를 찾으면 된다.
 
 데이터베이스를 선택하여 테이블 목록을 확인한다. 그리고 테이블의 모든 것을 조회하면 된다.
 
-![flag]()
+![flag](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Sequel/image/flag.png)
