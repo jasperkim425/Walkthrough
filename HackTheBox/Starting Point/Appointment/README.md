@@ -14,7 +14,7 @@ sudo openvpn starting_point_<id>.ovpn
 
 * Spawn Machine | Click to Spawn the machine 
 
-![machine]()
+![machine](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Appointment/image/machine.png)
 
 * Task 1 | What does the acronym SQL stand for?
 
@@ -34,7 +34,7 @@ sudo openvpn starting_point_<id>.ovpn
 
 https://owasp.org/www-project-top-ten/ 사이트에서 확인 가능하다.
 
-![A03]()
+![A03](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Appointment/image/A03.png)
 
 * Task 5 | What service and version are running on port 80 of the target?
 
@@ -42,7 +42,7 @@ https://owasp.org/www-project-top-ten/ 사이트에서 확인 가능하다.
 
 `nmap`을 사용해 80번 포트의 버전을 확인한다.
 
-![nmap]()
+![nmap](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Appointment/image/nmap.png)
 
 * Task 6 | What is the standard port used for the HTTPS protocol?
 
@@ -76,12 +76,12 @@ https://owasp.org/www-project-top-ten/ 사이트에서 확인 가능하다.
 
 브라우저로 검색하면 아래와 같이 로그인 페이지가 나온다.
 
-![http]()
+![http](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Appointment/image/http.png)
 
 admin:admin을 입력했는데 로그인이 되지 않는다.
 
 SQL Injection을 하기 위해 `admin'#:admin'#`을 입력했더니 플래그를 얻을 수 있었다.
 
-![admin]()
+![admin](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Appointment/image/admin.png)
 
-![flag]()
+![flag](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Appointment/image/flag.png)
