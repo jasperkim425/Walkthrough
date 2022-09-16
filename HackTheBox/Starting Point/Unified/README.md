@@ -255,5 +255,5 @@ ssh로 로그인하면 root 플래그와 user 플래그를 모두 확인할 수 
 ![root](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/root.png)
 
 ## Reference
-* Kisa Log4j 위형 대응 보고서 : https://www.krcert.or.kr/data/reportView.do?bulletin_writing_sequence=36476
+* Kisa Log4j 위 대응 보고서 : https://www.krcert.or.kr/data/reportView.do?bulletin_writing_sequence=36476
 * Log4j Unifi : https://www.sprocketsecurity.com/resources/another-log4j-on-the-fire-unifi
