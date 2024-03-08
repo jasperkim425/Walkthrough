@@ -5,7 +5,7 @@
 - OS : kali-linux-2024.01
 
 ## Walkthrough
-[https://www.vulnhub.com/entry/fristileaks-13,133/]
+[https://www.vulnhub.com/entry/fristileaks-13,133/](https://www.vulnhub.com/entry/fristileaks-13,133/)
 
 FristiLeaks 가상머신은 위 사이트에서 다운받을 수 있다.
 
